@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class FPSCamera : MonoBehaviour
 {
-    private new Transform camera;
-    public Vector2 sensibility;
+    public new Transform camera;
+    public Vector2 sensibility = new Vector2(250,250);
 
     // Start is called before the first frame update
     void Start()
     {
+        
         camera = transform.Find("Camera");
         Cursor.lockState = CursorLockMode.Locked;
-
+    
     }
 
     // Update is called once per frame
