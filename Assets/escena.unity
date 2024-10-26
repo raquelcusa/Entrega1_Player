@@ -159,6 +159,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
+  jumpForce: 5
+  maxJumpTime: 0.5
+  additionalJumpForce: 2
+  rotationSpeed: 3
+  cameraTransform: {fileID: 847984234}
 --- !u!136 &847984237
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -178,10 +183,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.36125374
+  m_Height: 1.6039937
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: -0.040676326, y: 0.8019968, z: 0.098070204}
 --- !u!54 &847984238
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -486,9 +491,9 @@ GameObject:
   - component: {fileID: 2098586468}
   - component: {fileID: 2098586467}
   - component: {fileID: 2098586466}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
