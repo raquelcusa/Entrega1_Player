@@ -28,8 +28,8 @@ public class PlayerMovement : MonoBehaviour
             velocity = direction * movementSpeed;
         }
         
-        velocity.y = rigidbody.velocity.y; 
-        rigidbody.velocity = velocity;
+        velocity.y = rigidbody.velocity.y;
+        rigidbody.velocity = new Vector3(velocity.x, rigidbody.velocity.y, velocity.z);
 
     }
      
