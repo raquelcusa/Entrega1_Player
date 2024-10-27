@@ -1173,6 +1173,22 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1285705782834317151, guid: 4c5a65caeee27e34f9ea2d94ecaff934, type: 3}
+      propertyPath: m_Quality
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285705782834317151, guid: 4c5a65caeee27e34f9ea2d94ecaff934, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285705782834317151, guid: 4c5a65caeee27e34f9ea2d94ecaff934, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8a2bac2e00c331642b47a9691adcb94e, type: 2}
+    - target: {fileID: 1285705782834317151, guid: 4c5a65caeee27e34f9ea2d94ecaff934, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: fdc8876a93f425540b09e0b50d5884b5, type: 2}
     - target: {fileID: 7992580012536702362, guid: 4c5a65caeee27e34f9ea2d94ecaff934, type: 3}
       propertyPath: m_LocalPosition.z
       value: 1.45

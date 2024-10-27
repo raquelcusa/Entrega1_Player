@@ -10,10 +10,10 @@ ModelImporter:
       name: Ch46_body
     second: {fileID: 8801460532865239624, guid: a067ede52610d8244ad3397bd8066695, type: 3}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
