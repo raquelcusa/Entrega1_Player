@@ -45,7 +45,7 @@ public class FPSCamera : MonoBehaviour
             // Cámara en primera persona: rotación en eje X
             float angle = (firstPersonCamera.localEulerAngles.x - ver + 360) % 360;
             if (angle > 180) angle -= 360;
-            angle = Mathf.Clamp(angle, -50, 50);
+            angle = Mathf.Clamp(angle, -40, 40);
             firstPersonCamera.localEulerAngles = Vector3.right * angle;
         }
         else

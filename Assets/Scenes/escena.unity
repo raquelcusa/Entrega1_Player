@@ -564,12 +564,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 531ab29124100c04eaf979e8bdca549b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2
+  movementSpeed: 3
   runSpeed: 10
   jumpForce: 5
   maxJumpTime: 0.5
   additionalJumpForce: 2
-  rotationSpeed: 3
+  rotationSpeed: 5
   cameraTransform: {fileID: 847984234}
 --- !u!136 &847984237
 CapsuleCollider:
