@@ -6,14 +6,16 @@ public class PlayerMovement : MonoBehaviour
 {
     private new Rigidbody rigidbody;
     public float movementSpeed = 5f;
+    public float runSpeed = 10f; // Nueva velocidad para correr
     public float jumpForce = 5f;
     public float maxJumpTime = 0.5f;
     public float additionalJumpForce = 2f;
-    public float rotationSpeed ; // Controla la velocidad de giro del jugador
+    public float rotationSpeed; // Controla la velocidad de giro del jugador
     public Transform cameraTransform; // Referencia a la cámara del jugador
 
     private bool isGrounded;
     private bool isJumping;
+    private bool isRunning; // Variable para saber si el jugador está corriendo
     private float jumpTimeCounter;
 
     void Start()
@@ -28,6 +30,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        // Verifica si el jugador está corriendo
+        isRunning = Input.GetKey(KeyCode.LeftShift); // Se activa cuando se presiona Left Shift
+
+        // Obtén la velocidad según si está corriendo o caminando
+        float currentSpeed = isRunning ? runSpeed : movementSpeed;
+
         // Obtén la entrada de movimiento
         float hor = Input.GetAxisRaw("Horizontal");
         float ver = Input.GetAxisRaw("Vertical");
@@ -44,8 +52,8 @@ public class PlayerMovement : MonoBehaviour
             // Aplica una rotación suave usando Slerp y el parámetro rotationSpeed
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
-            // Aplica la velocidad en la dirección
-            Vector3 velocity = direction * movementSpeed;
+            // Aplica la velocidad en la dirección, ajustando la velocidad si está corriendo
+            Vector3 velocity = direction * currentSpeed;
             velocity.y = rigidbody.velocity.y; // Mantener la velocidad vertical del Rigidbody
             rigidbody.velocity = velocity;
         }
